@@ -11,6 +11,14 @@ public class Main {
         minhaPilha.push(new No(5));
         minhaPilha.push(new No(6));
 
-        minhaPilha.toString();
+        Fila minhaFila = new Fila();
+
+        minhaFila.enqueue(new NoFila("primeiro"));
+        minhaFila.enqueue(new NoFila("segundo"));
+        minhaFila.enqueue(new NoFila("terceiro"));
+        minhaFila.enqueue(new NoFila("quarto"));
+
+        System.out.println(minhaPilha);
+        System.out.println(minhaFila);
     }
 }
