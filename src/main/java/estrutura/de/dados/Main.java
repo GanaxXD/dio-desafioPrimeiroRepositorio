@@ -18,7 +18,15 @@ public class Main {
         minhaFila.enqueue(new NoFila("terceiro"));
         minhaFila.enqueue(new NoFila("quarto"));
 
+        /*istaEncadeada minhaLista = new ListaEncadeada();
+
+        minhaLista.add(new NoComGenerics("1"));
+        minhaLista.add(new NoComGenerics("4"));
+        minhaLista.add(new NoComGenerics("5"));
+        minhaLista.add(new NoComGenerics("7"));*/
+
         System.out.println(minhaPilha);
         System.out.println(minhaFila);
+        //System.out.println(minhaLista);
     }
 }

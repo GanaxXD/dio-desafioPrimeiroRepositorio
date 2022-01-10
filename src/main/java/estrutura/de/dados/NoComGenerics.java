@@ -34,7 +34,7 @@ public class NoComGenerics<T> {
         String str = "No{" +
                 "conteúdo=" + conteúdo +
                 ", proximoNo=" + proximoNo +
-                '}\n';
+                "}\n";
         if(proximoNo != null){
             str += "->" + proximoNo.toString();
         } else {

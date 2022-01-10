@@ -21,9 +21,9 @@ public class ListaEncadeada {
         noAuxiliar.setProximoNo(novoNo);
     }
 
-    private void validaIndice(int index){
+    private void validaIndice(int index) throws IndexOutOfBoundsException{
         if(index >= this.size()){
-            throws new IndexOutOfBoundsException("Erro: Não existe essa posição no índice passado");
+            throw new IndexOutOfBoundsException().getCause();
         }
     }
 
@@ -33,7 +33,7 @@ public class ListaEncadeada {
         NoComGenerics noAuxiliar = referenciaEntrada;
         NoComGenerics noRetorno = null;
 
-        for(int i=0; i <this.size()-1; i++){
+        for(int i=0; i <= index; i++){
             //if(i <= index){
                 noRetorno = noAuxiliar;
                 noAuxiliar = noAuxiliar.getProximoNo();
