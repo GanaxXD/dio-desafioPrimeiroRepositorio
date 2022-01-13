@@ -1,3 +1,4 @@
+/*
 package estrutura.de.dados;
 
 public class ListaEncadeada {
@@ -94,3 +95,4 @@ public class ListaEncadeada {
         return str;
     }
 }
+*/
