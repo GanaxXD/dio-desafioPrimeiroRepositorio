@@ -16,5 +16,5 @@ Desta forma, o mesmo foi organizado da seguinte forma:
       * java
         * estrutura.de.dados: **guarda os arquivos de estudo sobre estrutura de dados**
         * primeira.bateria.desafios: **guarda arquivos da primeria entrega de desafios do bootcamp**
-    
+        * collections.com.java: **utilização de codigos utilizando as coleções em java**
 
