@@ -18,3 +18,7 @@ Desta forma, o mesmo foi organizado da seguinte forma:
         * primeira.bateria.desafios: **guarda arquivos da primeria entrega de desafios do bootcamp**
         * collections.com.java: **utilização de codigos utilizando as coleções em java**
 
+---
+
+Este repositório também será usado para demonstrar a quem interessar da DIO, o meu 
+progressso nos estudos dos cursos oferecidos.
