@@ -5,7 +5,7 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         //Pilha_Lifo minhaPilha = new Pilha_Lifo();
-
+        
         /*minhaPilha.push(new No(1));
         minhaPilha.push(new No(2));
         minhaPilha.push(new No(3));
@@ -31,6 +31,7 @@ public class Main {
         //System.out.println(minhaFila);
         //System.out.println(minhaLista);
 
+        /*
         Stack<StackJava> pilhastack = new Stack();
 
         pilhastack.push(new StackJava("Push: método de inserção (sempre no topo) da pilha"));
@@ -132,6 +133,8 @@ public class Main {
 
         //É possível criar uma lista de maps: List<Map<String, String>> alunos = new ArrayList<>();
 
+       */
+       
 
     }
 }
