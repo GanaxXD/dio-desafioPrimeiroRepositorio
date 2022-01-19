@@ -1,9 +1,24 @@
 package estrutura.de.dados;
 
-import java.util.*;
-
 public class Main {
     public static void main(String[] args) {
+    
+        Senac teste = new Senac();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         //Pilha_Lifo minhaPilha = new Pilha_Lifo();
         
         /*minhaPilha.push(new No(1));
