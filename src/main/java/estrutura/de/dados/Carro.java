@@ -3,20 +3,29 @@ package estrutura.de.dados;
 import java.util.Objects;
 
 public class Carro implements Comparable<Carro>{
-
+    
     String marca;
-
+    
+    //Coisas obrigatórias para construção de um método
+        //Para o construtor
+        Carro(){}
+        //para os construtores
+        void realizar(){
+        }
+    
+    
     public Carro(String marca) {
         this.marca = marca;
     }
-
+    
     public String getMarca() {
         return marca;
     }
-
+    
     public void setMarca(String marca) {
         this.marca = marca;
     }
+    
 
     //Método assinado pela interface Comparable
     @Override
