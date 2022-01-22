@@ -17,7 +17,7 @@ Desta forma, o mesmo foi organizado da seguinte forma:
         * estrutura.de.dados: **guarda os arquivos de estudo sobre estrutura de dados**
         * primeira.bateria.desafios: **guarda arquivos da primeria entrega de desafios do bootcamp**
         * collections.com.java: **utilização de codigos utilizando as coleções em java**
-
+        * segunda.batwria.desafios: **guarda arquivos da terceira entrega de desafios do bootcamp**
 ---
 
 Este repositório também será usado para demonstrar a quem interessar da DIO, o meu 
