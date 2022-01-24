@@ -1,5 +1,9 @@
 package estrutura.de.dados;
 
+import orientacao.objetos.Conta;
+import orientacao.objetos.ContaCorrente;
+import orientacao.objetos.ContaPoupanca;
+
 public class Main {
     public static void main(String[] args) {
     
@@ -133,9 +137,22 @@ public class Main {
         //É possível criar uma lista de maps: List<Map<String, String>> alunos = new ArrayList<>();
 
        */
+    
+        Conta cc = new ContaCorrente();
+        Conta cp = new ContaPoupanca();
         
-        Carro c1 = new Carro();
-        c1.realizar();
+        System.out.println(cc.imprimirExtrato());
+        System.out.println(cp.imprimirExtrato());
+        
+        cc.depositar(2000);
+        cp.depositar(100);
+    
+        System.out.println(cc.imprimirExtrato());
+        System.out.println(cp.imprimirExtrato());
+        
+        cc.transferir(250, cp);
+        System.out.println(cc.imprimirExtrato());
+        System.out.println(cp.imprimirExtrato());
        
 
     }
