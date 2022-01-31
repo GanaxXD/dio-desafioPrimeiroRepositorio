@@ -20,5 +20,6 @@ public class SingletonLazy {
             instancia = new SingletonLazy();
         }
         return instancia;
+        
     }
 }
