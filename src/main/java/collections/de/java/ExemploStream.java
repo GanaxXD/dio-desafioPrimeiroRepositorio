@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 public class ExemploStream {
     public static void main(String[] args) {
         List<String> nomes = new ArrayList<>();
+        Object c = new Object();
     
         //Adiciona no próximo índice livre da lista
         nomes.add("Pedro");
