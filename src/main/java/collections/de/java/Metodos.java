@@ -18,5 +18,17 @@ public class Metodos {
     System.out.println("O valor de i é "+i);//imprimirá 10;
     */
     
-
+    public static void main(String[] args) {
+        System.out.println(f(9,3));
+        
+        
+    }
+    
+    public static int f(int x, int y){
+        if(y==0){
+            return x;
+        } else {
+            return f(y, x%y);
+        }
+    }
 }

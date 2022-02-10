@@ -93,10 +93,9 @@ public class ExemploStream {
                     (nome) -> nome.toLowerCase(Locale.ROOT).contains("y")
             )
         );
-    
-        //Exemplo de operação encadeada, já que quase todos os métodos
-        //de uma stream retorna uma nova stream
+        
         System.out.println();
+        
     
     }
 }
