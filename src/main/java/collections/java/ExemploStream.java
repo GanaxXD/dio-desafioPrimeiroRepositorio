@@ -1,4 +1,4 @@
-package collections.de.java;
+package collections.java;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -9,7 +9,6 @@ import java.util.stream.Collectors;
 public class ExemploStream {
     public static void main(String[] args) {
         List<String> nomes = new ArrayList<>();
-        Object c = new Object();
     
         //Adiciona no próximo índice livre da lista
         nomes.add("Pedro");
@@ -33,6 +32,12 @@ public class ExemploStream {
         nomes.add("Arthur");
         nomes.add("Eduarda");
         nomes.add("Victor");
+        nomes.add("Aquiles");
+        nomes.add("Regianne");
+        nomes.add("Adam");
+        nomes.add("Arthur");
+        nomes.add("Amélia");
+        nomes.add("Acácia");
         
         System.out.println("Número de nomes: "+ nomes.stream().count());
     

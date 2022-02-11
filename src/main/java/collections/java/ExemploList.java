@@ -1,4 +1,4 @@
-package collections.de.java;
+package collections.java;
 
 import java.util.*;
 

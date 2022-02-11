@@ -1,4 +1,4 @@
-package collections.de.java;
+package collections.java;
 
 //Tente exibir o valor de a sem modificar a linha de sua atribuição
 public class PrimeiroTrauma {

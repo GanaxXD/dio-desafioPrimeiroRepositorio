@@ -1,4 +1,4 @@
-package collections.de.java;
+package collections.java;
 
 import java.util.Locale;
 import java.util.Scanner;

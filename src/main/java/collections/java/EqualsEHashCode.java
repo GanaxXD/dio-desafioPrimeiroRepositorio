@@ -1,8 +1,6 @@
-package collections.de.java;
+package collections.java;
 
 import java.util.Objects;
-import java.util.Set;
-import java.util.TreeSet;
 
 //Entendendo o Equals e HashCode
 public class EqualsEHashCode {

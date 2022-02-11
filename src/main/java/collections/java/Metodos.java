@@ -1,4 +1,4 @@
-package collections.de.java;
+package collections.java;
 
 public class Metodos {
     
