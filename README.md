@@ -6,22 +6,40 @@ O propósito deste se estende ainda à uma espécie de manual de consulta rápid
 para o caso de dúvidas que possam surgir no decorrer do aprendizado
 ou da codificação.
 
-Esse repositório trará os conhecimentos obtidos sobre o Java.
-Desta forma, o mesmo foi organizado da seguinte forma:
-
 ---
 
-* src
-    * main 
-      * java
-        * estrutura.de.dados: **guarda os arquivos de estudo sobre estrutura de dados**
-        * primeira.bateria.desafios: **guarda arquivos da primeria entrega de desafios do bootcamp**
-        * collections.com.java: **utilização de codigos utilizando as coleções em java**
-        * segunda.bateria.desafios: **guarda arquivos da segunda entrega de desafios do bootcamp**
-        * terceira.bateria.desafios: **guarda arquivos da terceira entrega de desafios do bootcamp**
-        * quarta.bateria.desafios: **guarda arquivos da quarta entrega de desafios do bootcamp**
-        * segunda.bateria.desafios: **guarda arquivos da quinta entrega de desafios do bootcamp**
----
+![](src/main/resources/logo-footer.png)
 
-Este repositório também será usado para demonstrar a quem interessar da DIO, o meu 
-progressso nos estudos dos cursos oferecidos.
+## Desafios Concluídos
+
+Quanto aos desafios criados, temos:  
+
+
+<!-- Java -->
+<details>
+  <summary><span>Java</span></summary>
+  <div>
+    <h4>Desafios Propostos utilizando a Linguagem Java </h4>
+    <a href="https://github.com/GanaxXD/dio-desafioPrimeiroRepositorio/blob/master/src/main/java/primeira/bateria/desafios/DesafioParOuImpar.java">Par ou Ímpar</a><br/>
+    <a href="https://github.com/GanaxXD/dio-desafioPrimeiroRepositorio/blob/master/src/main/java/primeira/bateria/desafios/DesafioPronalts.java">Pronalts</a><br/>
+    <a href="https://github.com/GanaxXD/dio-desafioPrimeiroRepositorio/blob/master/src/main/java/primeira/bateria/desafios/DesafioTrigoNoTabuleiro.java">Trigo no Tabuleiro</a><br/>
+    <a href="https://github.com/GanaxXD/dio-desafioPrimeiroRepositorio/blob/master/src/main/java/primeira/bateria/desafios/DesafioXadrez.java">Desafio do Xadrez</a><br/>
+    <a href="https://github.com/GanaxXD/dio-desafioPrimeiroRepositorio/blob/master/src/main/java/segunda/bateria/desafios/DesafioUmAMil.java">Um a Mil</a><br/>
+    <a href="https://github.com/GanaxXD/dio-desafioPrimeiroRepositorio/blob/master/src/main/java/segunda/bateria/desafios/MultiplicacaoSimples.java">Multiplicação Simples</a><br/>
+    <a href="https://github.com/GanaxXD/dio-desafioPrimeiroRepositorio/blob/master/src/main/java/terceira/bateria/desafios/BatalhaDigitrons.java">Batalha de Digitrons</a><br/>
+    <a href="https://github.com/GanaxXD/dio-desafioPrimeiroRepositorio/blob/master/src/main/java/terceira/bateria/desafios/Lanche.java">Lanche</a><br/>
+    <a href="https://github.com/GanaxXD/dio-desafioPrimeiroRepositorio/blob/master/src/main/java/terceira/bateria/desafios/QuantidadeNumerosPositivos.java">Quantidade de Números Positivos</a><br/>
+    <a href="https://github.com/GanaxXD/dio-desafioPrimeiroRepositorio/blob/master/src/main/java/quarta/bateria/desafios/FasesLua.java">Fases da Lua</a><br/>
+    <a href="https://github.com/GanaxXD/dio-desafioPrimeiroRepositorio/blob/master/src/main/java/quarta/bateria/desafios/ReservatorioDeMel.java">Reservatório de Mel</a><br/>
+    <a href="https://github.com/GanaxXD/dio-desafioPrimeiroRepositorio/blob/master/src/main/java/quarta/bateria/desafios/SenhaFixa.java">Senha Fixa</a><br/>
+    <a href="https://github.com/GanaxXD/dio-desafioPrimeiroRepositorio/blob/master/src/main/java/quinta/bateria/desafios/AcimaDaDiagonalPrincipal.java">Acima da Diagonal Principal</a><br/>
+    <a href="https://github.com/GanaxXD/dio-desafioPrimeiroRepositorio/blob/master/src/main/java/quinta/bateria/desafios/MensagemPadreBalao.java">Mensagem Padre Balão</a><br/>
+    <a href="https://github.com/GanaxXD/dio-desafioPrimeiroRepositorio/blob/master/src/main/java/quinta/bateria/desafios/TopN.java">Top N</a><br/>
+    <h4>Conceitos Básicos da Linguagem Java </h4>
+
+
+
+
+
+</div>
+</details>
