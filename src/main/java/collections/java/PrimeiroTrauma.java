@@ -1,5 +1,7 @@
 package collections.java;
 
+import projeto.campo.minado.modelos.Campo;
+
 //Tente exibir o valor de a sem modificar a linha de sua atribuição
 public class PrimeiroTrauma {
     //Essa é uma variável da instancia, logo, para acessá-lo,
@@ -20,5 +22,7 @@ public class PrimeiroTrauma {
         System.out.println(p.a);
         //Se o a fosse static, a resposta seria apenas:
         //System.out.println(a);
+    
+        
     }
 }
