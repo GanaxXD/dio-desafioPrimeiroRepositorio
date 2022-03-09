@@ -1,5 +1,7 @@
 package projeto.campo.minado.modelos;
 
+import projeto.campo.minado.excecoes.ExplosaoException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +17,7 @@ public class Campo {
     private boolean marcado; //por padrão o boolean já é falso
     
     //indicando os campos vizinhos
-    //A list é do tipo campo (autorelacionamento) do tipo 1:N
+    //A list é do tipo campo (auto relacionamento) do tipo 1:N
     private List<Campo> vizinhos = new ArrayList<>();
     
     //Quando não ponho nenhum modificador de acesso,
@@ -32,7 +34,7 @@ public class Campo {
     boolean adicionarVizinho(Campo vizinho){
         
         //PASSO 1: verifica se o campo está na diagonal || mesma linha || mesma coluna
-        //O campo cadidato a vizinho pode estar na mesma linha,
+        //O campo candidato a vizinho pode estar na mesma linha,
         //na mesma coluna, ou na diagonal do campo alvo.
         //Ele sempre estará na diagonal se a linha e coluna forem
         //diferentes da linha e coluna do campo alvo.
@@ -56,7 +58,106 @@ public class Campo {
             vizinhos.add(vizinho);
             return true;
         }
-      
         return false;
+    }
+    
+    
+    //Função para alternar se o campo está marcado ou não.
+    //Não posso marcar campos abertos.
+    void alternarMarcacao(){
+        if(!aberto){
+            marcado = !marcado;
+        }
+    }
+    
+    //Função abrir campo.
+    //Ao abrir, o campo poderá estar minado ou não.
+    //Só posso abrir campos não abertos e não marcados
+    boolean abrir(){
+        if(!aberto && !marcado){
+            aberto = true;
+            
+            if(minado){
+                //Jogo acabou.
+                throw new ExplosaoException();
+            }
+            
+            if(vizinhancaSegura()){
+                vizinhos.forEach(v -> v.abrir());
+            }
+            
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    //Função de expandir
+    //Expansão de vizinhança segura
+    boolean vizinhancaSegura(){
+        return vizinhos.stream().noneMatch(
+                v -> v.minado
+        );
+    }
+    
+    //Função que verifica se o campo foi marcado
+    public boolean isMarcado(){
+        return marcado;
+    }
+    
+    //Por mina no campo
+    void minar(){
+        minado = true;
+    }
+    
+    boolean objetivoAlcansado(){
+        boolean desvendado = !minado && aberto;
+        boolean protegido = minado && marcado;
+        return desvendado || protegido;
+    }
+    
+    long minasNaVizinhanca(){
+        return vizinhos.stream().filter(v -> v.minado).count();
+    }
+    
+    void reiniciar(){
+        aberto = false;
+        minado = false;
+        marcado = false;
+    }
+    
+    public boolean isAberto(){
+        return aberto;
+    }
+    
+    public boolean isMinado(){
+        return minado;
+    }
+    
+    public boolean isFechado() {
+        return !isAberto();
+    }
+    
+    public int getLinha() {
+        return this.linha;
+    }
+    
+    public int getColuna() {
+        return this.coluna;
+    }
+    
+    @Override
+    public String toString() {
+        if(marcado){
+            return "X";
+        } else if (aberto && minado){
+            return "*"; //bomba
+        } else if (aberto && minasNaVizinhanca() > 0){
+            return Long.toString(minasNaVizinhanca());
+        } else if (aberto){
+            return " ";
+        } else {
+            return "?";
+        }
     }
 }
