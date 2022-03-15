@@ -1,5 +1,8 @@
 package classes.generics;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         //Se eu não definir o tipo aqui, elas serão do tipo Object
@@ -19,5 +22,27 @@ public class Main {
         c3.guardarCoisa1(10);
         //c3.guardarCoisa2("Ali"); //aqui ocorre a mesma coisa que em c2.guardarCoisa
         System.out.println(c3);
+        
+        //Perceba que a definição do tipo ficou com a subclasse CaixaHerancaInt, e não com a classe pai (Caixa)
+        CaixaHerancaInt<String> a = new CaixaHerancaInt<>();
+        a.guardarCoisa1("Teste");
+        System.out.println(a);
+    
+        //Perceba o erro na linha abaixo: a restrição só aceita numeros
+        //CaixaHerancaComRestricao<String> b = new CaixaHerancaComRestricao<String>();
+        CaixaHerancaComRestricao<Double> b = new CaixaHerancaComRestricao<>();
+        b.guardarCoisa1(25.55);
+        System.out.println(b);
+    
+        CaixaHerancaComRestricao<Integer> i = new CaixaHerancaComRestricao<>();
+        i.guardarCoisa1(3289);
+        System.out.println(i);
+    
+        List<Integer> numeros = Arrays.asList(1,2,3,4,5,6);
+        List<String> letras = Arrays.asList("aba", "eba", "iba");
+        
+        System.out.println(CaixaMetodoComGenerics.getUltimo3(numeros));
+        System.out.println(CaixaMetodoComGenerics.getUltimo2(letras));
+    
     }
 }
