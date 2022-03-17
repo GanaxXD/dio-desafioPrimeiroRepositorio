@@ -1,3 +1,5 @@
+package primeira.bateria.desafios;
+
 import java.util.Scanner;
 
 public class DesafioXadrez {

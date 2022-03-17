@@ -1,3 +1,5 @@
+package primeira.bateria.desafios;
+
 import java.io.IOException;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
