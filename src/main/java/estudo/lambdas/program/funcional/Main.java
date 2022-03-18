@@ -2,10 +2,13 @@ package estudo.lambdas.program.funcional;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.BiFunction;
 import java.util.function.BinaryOperator;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.function.Supplier;
+import java.util.function.UnaryOperator;
 
 public class Main {
 
@@ -84,7 +87,7 @@ public class Main {
 		//NOTA: T = qualquer coisa (Produto, int, boolean, etc)
 		// NOME 		|	ASSINATURA -> RETORNO 	|
 		//------------------------------------------|
-		// Supplien		|	Nada -> T (Generics)
+		// Supplier		|	Nada -> T (Generics)
 		// Consumer		|	T -> nada
 		// UnaryOperat. |	T -> T
 		// BinaryOperat.| 	T,T -> T (tudo do mesmo tipo)
@@ -112,7 +115,9 @@ public class Main {
 		System.out.println(parOuImpar.apply(32));
 		
 		//Usando a compoisão de funções para dividir um grande problema
-		//em pequenos problemas:
+		//em pequenos problemas
+		//NOTA: a saída de uma função deve ser do mesmo parâmetro de 
+		//entrada da próxima função:
 		Function<String, String> oResultado1 = valor -> "O resultado é: "+valor;
 		Function<String, String> oResultado2 = valor -> valor+ ". Parabéns";
 		Function<String, String> oResultado3 = valor -> valor+ " pelo processamento";
@@ -126,6 +131,80 @@ public class Main {
 		);
 
 
+		System.out.println("\n\nPREDICATE"
+				+ "\n");
+		//Recebe um dado e retorna true ou false, e posso ter composição
+		//de predicate, igual a de função
+		Predicate<Integer> ehPar = num -> num % 2 == 0;
+		Predicate<Integer> temTresDigitos = num -> num >= 100 && num <=999;
+		
+		System.out.println(
+			ehPar
+			.and(temTresDigitos)
+			.test(900)
+		);
+		System.out.println(
+				ehPar
+				.and(temTresDigitos)
+				.negate()
+				.test(900)
+		);
+		
+		System.out.println(
+				ehPar
+				.or(temTresDigitos)
+				.test(1200)
+		);
+		
+		System.out.println("\n\nSUPPLIER"
+				+ "\n");
+		
+		//Não recebe nada e devolve alguma coisa. É um fornecedor, dados "saem dele"
+		//NOTA: nessa função eu preciso dos () porque eu não recebo nada
+		Supplier<List<String>> listaDeNomes = () -> Arrays.asList("a", "b", "c");
+		System.out.println(listaDeNomes.get());
+		
+		System.out.println("\n\nUNARY OPERATOR"
+				+ "\n");
+		UnaryOperator<Integer> maisDez = n -> n+10;
+		UnaryOperator<Integer> vezezDois = n -> n*2;
+		UnaryOperator<Integer> aoQuadrado = n -> n *n;
+		
+		System.out.println(
+			maisDez
+			.andThen(vezezDois)
+			.andThen(aoQuadrado)
+			.apply(10)
+		);
+		
+		//O método compose faz com que antes de executar o método
+		//indicado, seja executado outro (a leitura fica de bbaixo para cima).
+		//Ex: Antes de executar o aoQuadrado, execute vezesDois;
+		//	  antes de executar o vezesDois, execute o maisDez.
+		System.out.println(
+			aoQuadrado
+			.compose(vezezDois)
+			.compose(maisDez)
+			.apply(10)
+		);
+		
+		
+		System.out.println("\n\nBINARY OPERATOR"
+				+ "\n");
+		//Recebe dois parâmetros e deolve um
+		BinaryOperator<Double> mediaNotas = (num1, num2) -> (num1+num2)/2;
+		System.out.println(
+			mediaNotas.apply(7.5, 8.99)
+		);
+		
+		//BiFunction recebe 3 tipos:
+		//1 -> é o tipod do 1 parâmetro;
+		//2 -> é o tipo do 2 parâmetro;
+		//3 -> é o tipo da resposta da lambd function
+		BiFunction<Double, Double, String> resultado = 
+				(n1, n2) -> ((n1+n2)/2) >= 7.0 ?
+				"Aprovado" : "Reprovado";
+		System.out.println(resultado.apply(9.0, 1.0));
 	}
 
 }
