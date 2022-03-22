@@ -1,4 +1,4 @@
-package funcoes.lambda;
+package OLDfuncoes.lambda;
 
 public class TesteCalculo {
     public static void main(String[] args) {

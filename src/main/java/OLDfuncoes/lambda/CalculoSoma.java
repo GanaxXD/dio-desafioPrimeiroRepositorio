@@ -1,4 +1,4 @@
-package funcoes.lambda;
+package OLDfuncoes.lambda;
 
 public class CalculoSoma implements CalculoInterface{
     

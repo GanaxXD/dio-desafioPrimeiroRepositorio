@@ -1,4 +1,4 @@
-package funcoes.lambda;
+package OLDfuncoes.lambda;
 
 //Interface terá apenas um método para facilitar a utilização
 //de funções lâmbdas anônimas em objetos que implementem essa interface
