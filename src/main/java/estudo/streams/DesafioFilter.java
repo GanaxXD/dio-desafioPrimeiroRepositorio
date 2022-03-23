@@ -18,8 +18,8 @@ public class DesafioFilter {
 		List<Produto> produtos = Arrays.asList(p1,p2,p3,p4,p5);
 		
 		//Pegar apenas produtos em promoção com valor de desconto acima de 10%
-		produtos.stream()
-			.filter(p-> p.getDesconto() > 0.1)
+		produtos.stream() 
+			.filter(p-> p.getDesconto() > 0.1 || (p.getPreco() * (1-p.getDesconto())<30.0 ))        
 			.forEach(System.out::println);
 
 	}
