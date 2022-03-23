@@ -3,7 +3,6 @@ package estudo.streams;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Function;
-import java.util.function.Supplier;
 import java.util.function.UnaryOperator;
 
 public class DesafioMap {
