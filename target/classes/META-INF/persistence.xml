@@ -6,7 +6,7 @@
              version="2.1">
     <persistence-unit name="jpahibernate">
     	<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-    	<class>src.main.java.jpa.hibernate.Usuario</class>
+    	<class>jpa.hibernate.Usuario</class>
     	
     	
     	<properties>
