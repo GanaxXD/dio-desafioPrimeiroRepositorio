@@ -1,11 +1,11 @@
 package estudo.lambdas.program.funcional;
 
 public class Produto {
-	
+
 	final String nome;
 	final double preco;
 	final double desconto;
-	
+
 	public Produto(String nome, double preco, double desconto) {
 		super();
 		this.nome = nome;
@@ -29,6 +29,5 @@ public class Produto {
 	public double getDesconto() {
 		return desconto;
 	}
-	
-	
+
 }

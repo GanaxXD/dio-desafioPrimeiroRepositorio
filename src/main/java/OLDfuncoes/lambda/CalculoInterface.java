@@ -4,5 +4,5 @@ package OLDfuncoes.lambda;
 //de funções lâmbdas anônimas em objetos que implementem essa interface
 @FunctionalInterface
 public interface CalculoInterface {
-    double executar(double a, double b);
+	double executar(double a, double b);
 }

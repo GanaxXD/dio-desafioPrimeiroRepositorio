@@ -1,31 +1,32 @@
 package jpa.hibernate;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Transient;
 
 @Entity
-public class Usuario {
-	
+public class Produto {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+
+	@Column(name = "nome", nullable = false, length = 255)
 	private String nome;
-	private String email;
-	
-	@Transient
-	private String dadoQueNaoVaiParaoBanco = "";
-	
-	public Usuario(String nome, String email) {
+
+	@Column(nullable = true, precision = 2)
+	private Double preco;
+
+	public Produto(Long id, String nome, Double preco) {
 		super();
+		this.id = id;
 		this.nome = nome;
-		this.email = email;
+		this.preco = preco;
 	}
-	
-	public Usuario() {
-	
+
+	public Produto() {
 	}
 
 	public Long getId() {
@@ -44,19 +45,12 @@ public class Usuario {
 		this.nome = nome;
 	}
 
-	public String getEmail() {
-		return email;
+	public Double getPreco() {
+		return preco;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setPreco(Double preco) {
+		this.preco = preco;
 	}
 
-	@Override
-	public String toString() {
-		return "Usuario [id=" + id + ", nome=" + nome + ", email=" + email + "]";
-	}
-	
-	
-	
 }

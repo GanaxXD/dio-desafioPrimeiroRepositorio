@@ -4,7 +4,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-public class Main {
+public class Insert {
 
 	public static void main(String[] args) {
 		
@@ -19,10 +19,13 @@ public class Main {
 		
 		Usuario usuario = new Usuario("Pedro", "pedro@gmail.com");
 		
-		//Persistindo no DB: necessário estar dentro de uma transação
+		//Persistindo no DB: necessário estar dentro de uma transação.
+		//Contudo, consultas não precisam de transação
 		em.getTransaction().begin();
 		em.persist(usuario);
 		em.getTransaction().commit();
+		
+		System.out.println("O Id gerado no banco para o usuário foi: "+usuario.getId());
 		
 		em.close();
 		emf.close();
