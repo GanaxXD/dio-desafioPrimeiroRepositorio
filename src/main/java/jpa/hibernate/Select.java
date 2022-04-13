@@ -18,8 +18,9 @@ public class Select {
 		Usuario usuario = em.find(Usuario.class, 1L);
 		System.out.println(usuario);
 		
-		emf.close();
 		em.close();
+		emf.close();
+		
 	}
 
 }

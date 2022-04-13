@@ -19,6 +19,33 @@
             <artifactId>junit-jupiter</artifactId>
             <version>5.8.2</version>
         </dependency>
+        
+        <!-- O JPA DO HIBERNATE ESTAVA APRESENTANDO PROBLEMAS
+         AO RODAR O PROJETO. O ERRO ERA QUE O JAVA NÃO CONSEGUIA
+         ENCONTRAR O JABX. PESQUISANDO, VÍ QUE A PARTIR DO JAVA
+         8, ESSA LIB FOI RETIRADA DA JDK PADRÃO DO JAVA, E POR ISSO
+         O SISTEMA NEM CONSEUIA CHEGAR NO BANCO, SEMPRE APRESENTANDO ERROS.
+         
+         ESSAS DUAS LIBS SÃO IMPORTANTES PARA
+         O HIBERNATE FUNCIONAR A PARTIR DO JAVA 8
+         -->
+        
+        <!-- API, java.xml.bind module -->
+		<dependency>
+		    <groupId>jakarta.xml.bind</groupId>
+		    <artifactId>jakarta.xml.bind-api</artifactId>
+		    <version>2.3.2</version>
+		</dependency>
+		<!-- Runtime, com.sun.xml.bind module -->
+		<dependency>
+		    <groupId>org.glassfish.jaxb</groupId>
+		    <artifactId>jaxb-runtime</artifactId>
+		    <version>2.3.2</version>
+		</dependency>
+        
+        
+        
+        
     </dependencies>
 
 </project>
