@@ -28,7 +28,7 @@ public class DAO<E> {
 		}
 	}
 	
-	public DAO() {}
+	public DAO() {this(null);}
 	
 	public DAO(Class<E> classe) {
 		this.classe = classe;

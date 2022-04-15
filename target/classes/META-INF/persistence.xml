@@ -6,8 +6,14 @@
              version="2.1">
     <persistence-unit name="jpahibernate">
     	<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-    	<class>src.main.java.jpa.hibernate.Usuario</class>
-    	<class>src.main.java.jpa.hibernate.Produto</class>
+    	<class>src.main.java.jpa.hibernate.models.umpraum.Usuario</class>
+    	<class>src.main.java.jpa.hibernate.models.umpraum.Produto</class>
+    	<class>src.main.java.jpa.hibernate.models.umpraum.Assento</class>
+    	<class>src.main.java.jpa.hibernate.models.umpraum.Cliente</class>
+    	<class>src.main.java.jpa.hibernate.models.umpramuitos.ItemPedido</class>
+    	<class>src.main.java.jpa.hibernate.models.umpramuitos.Pedido</class>
+    	<class>src.main.java.jpa.hibernate.models.muitospramuitos.Tio</class>
+    	<class>src.main.java.jpa.hibernate.models.muitospramuitos.Sobrinho</class>
     	
     	<properties>
 	    	
@@ -17,7 +23,7 @@
             <property name="javax.persistence.jdbc.password" value="admin" /> <!-- DB Password -->
 		
 		
-	    	<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/> <!-- DB Dialect -->
+	    	<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL57Dialect"/> <!-- DB Dialect -->
             <property name="hibernate.hbm2ddl.auto" value="update" /> <!-- create / create-drop / update / none-->
             <property name="hibernate.show_sql" value="true" /> <!-- Show SQL in console -->
             <property name="hibernate.format_sql" value="true" /> <!-- Show SQL formatted -->
